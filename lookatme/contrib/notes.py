@@ -2,9 +2,6 @@
 Simplistic speaker notes
 """
 
-
-#import urwid
-
 from lookatme.tui import MarkdownTui
 from lookatme.exceptions import IgnoredByContrib
 
@@ -29,6 +26,5 @@ def render_code(token, body, stack, loop):
     notes = token['text'] or ""
     with open('/tmp/notes-file', "w") as f:
             f.write(notes)
-            f.close()
     
-    return None; #urwid.Text("Yay! The notes extension works+1!")
+    return None
